@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const port = 3333;
+const port = 5000;
 
 const server = express();
 server.use(bodyParser.json());
@@ -19,7 +19,7 @@ let smurfs = [
     name: 'Brainey Smurf',
     age: 200,
     height: '8cm'
-  }
+  },
 ];
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
